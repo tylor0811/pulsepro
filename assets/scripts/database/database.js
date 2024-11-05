@@ -198,7 +198,7 @@ export async function signInUser(formElement, credential) {
             'Welcome User'
         );
 
-        // goToPage('pulsepro-user-home-page.html');
+        goToPage('pulsepro-user-home-page.html');
     } catch (error) {
         if (error.code === 'auth/invalid-credential') {
             await displayFormResponseMessage(
@@ -253,7 +253,7 @@ export async function signInAdmin(formElement, credential) {
             'Welcome Admin'
         );
 
-        // goToPage('pulsepro-admin-dashboard.html');
+        goToPage('pulsepro-admin-dashboard.html');
     } catch (error) {
         if (error.code === 'auth/invalid-credential') {
             await displayFormResponseMessage(
@@ -307,6 +307,8 @@ export async function signInDoctor(formElement, credential) {
             'ri-check-line',
             'Welcome Doctor'
         );
+
+        goToPage('pulsepro-doctor-dashboard.html');
     } catch (error) {
         if (error.code === 'auth/invalid-credential') {
             await displayFormResponseMessage(
