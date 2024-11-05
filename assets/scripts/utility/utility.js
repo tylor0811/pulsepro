@@ -176,5 +176,5 @@ export function decryptPassword(encryptedPassword) {
  * when being hosted on github
  */
 export function goToPage(page) {
-    window.open(`https://tylor0811.github.io/pulsepro/${page}`, '_self');
+    window.location.href = `https://tylor0811.github.io/pulsepro/${page}`;
 }
