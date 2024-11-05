@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tylor Coore">
+
+    <!-- FAV ICONS FOR DARK/LIGHT MODE -->
+    <link
+      rel="shortcut icon" 
+      href="./assets/images/black-fav-icon.png" 
+      type="image/png"
+      media="(prefers-color-scheme: light)"
+    >
+    
+    <link 
+      rel="shortcut icon" 
+      href="./assets/images/white-fav-icon.png" 
+      type="image/png"
+      media="(prefers-color-scheme: dark)"
+    >
+
+    <title>PulsePro - Authentication</title>
+
+    <!-- REMIX ICONS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- CUSTOM STYLES -->
+    <link rel="stylesheet" href="./assets/styles/styles.css">
+</head>
+<body>
+  <div class="auth-forms-container">
+    <!-- AUTHENTICATION FORM LOGO -->
+    <span href="./index.html" class="inline-flex page-logo | auth-form-container__logo">
+      <i class="ri-pulse-line | page-logo__icon"></i>
+      PulsePro
+    </span>
+
+    <!-- AUTHENTICATION FORMS WRAPPER -->
+    <div class="auth-forms-wrapper" data-auth-forms-wrapper data-show-form="login-form">
+      <!-- LOGIN FORM CONTAINER START -->
+      <div class="form-container | login-form-container" data-login-form-container data-login-user-type="user">
+        <span class="form-container__heading">Login</span>
+        <p class="form-container__text">
+          Don't have an account?<br>
+          <a href="" class="form__link" data-signup-form-link>Sign Up</a>
+        </p>
+
+        <!-- FORM -->
+        <form action="" method="post" autocomplete="off" class="form" data-login-form>
+          <!-- FORM GROUPS CONTAINER -->
+          <div class="form__groups-container">
+            <!-- FORM GROUP EMAIL -->
+            <div class="form__group">
+              <label for="login-form-email" class="form__label">Email</label>
+              <input
+                type="email" 
+                name="login-form-user-email" 
+                id="login-form-email"
+                class="form__input"
+                data-form-input
+              >
+              <span class="form__group-error-text" data-login-form-email-error-text></span>
+            </div> 
+
+            <!-- FORM GROUP PASSWORD -->
+            <div class="form__group">
+              <header class="form__group-header">
+                <label for="login-form-password" class="form__label">Password</label>
+                <a href="" class="form__link | forgot-password-link" data-forgot-password-link>Forgot Password?</a>
+              </header>
+              <div class="has-toggle-show-password-btn">
+                <input
+                  type="password"
+                  name="login-form-user-password"
+                  id="login-form-password"
+                  class="form__input"
+                  data-form-input
+                >
+                <button type="button" class="form__toggle-show-password-btn" data-toggle-show-password-btn data-related-input-id="login-form-password">
+                  <i class="ri-eye-off-line"></i>
+                </button>
+                <span class="form__group-error-text" data-login-form-password-error-text></span>
+              </div>
+            </div>
+          </div> 
+
+          <!-- RESPONSE MESSAGE CONTAINER -->
+          <div class="form-response-message-container" data-form-response-message-container>
+            <i></i>
+            <p></p>
+          </div>
+          
+          <!-- FORM SUBMIT BUTTON -->
+          <button type="submit" class="btn-primary | form__submit-btn" data-login-form-submit-btn>
+            Login
+          </button>
+
+          <!-- FORM FOOTER -->
+          <footer class="form__footer">
+            <a href="" class="form__link | form__footer-link" data-admin-login-link>Admin Login</a>
+            <a href="" class="form__link | form__footer-link" data-doctor-login-link>Doctor Login</a>
+          </footer>
+        </form> 
+      </div>
+      <!-- LOGIN FORM CONTAINER END -->
+
+      <!-- SIGN UP FORM CONTAINER START -->
+      <div class="form-container | signup-form-container">
+        <span class="form-container__heading">Sign Up</span>
+        <p class="form-container__text">
+          Already have an account?<br>
+          <a href="" class="form__link" data-login-form-link>Login</a>
+        </p>
+
+        <!-- FORM -->
+        <form action="" method="post" autocomplete="off" class="form" data-signup-form>
+          <!-- FORM GROUPS CONTAINER -->
+          <div class="form__groups-container">
+            <!-- FORM GROUP FIRST NAME -->
+            <div class="form__group">
+              <label for="signup-form-first-name" class="form__label">First Name</label>
+              <input
+                type="text" 
+                name="signup-form-user-first-name" 
+                id="signup-form-first-name"
+                class="form__input"
+                autocapitalize="words"
+                data-form-input
+              >
+              <span class="form__group-error-text" data-signup-form-first-name-error-text></span>
+            </div>
+            
+            <!-- FORM GROUP LAST NAME -->
+            <div class="form__group">
+              <label for="signup-form-last-name" class="form__label">Last Name</label>
+              <input 
+                type="text" 
+                name="signup-form-user-last-name" 
+                id="signup-form-last-name"
+                class="form__input"
+                data-form-input
+              >
+              <span class="form__group-error-text" data-signup-form-last-name-error-text></span>
+            </div>
+
+            <!-- FORM GROUP EMAIL -->
+            <div class="form__group">
+              <label for="signup-form-email" class="form__label">Email</label>
+              <input
+                type="email" 
+                name="signup-form-user-email" 
+                id="signup-form-email"
+                class="form__input"
+                data-form-input
+              >
+              <span class="form__group-error-text" data-signup-form-email-error-text></span>
+            </div>
+            
+            <!-- FORM GROUP PASSWORD -->
+            <div class="form__group">
+              <label for="signup-form-password" class="form__label">Password</label>
+              <div class="has-toggle-show-password-btn">
+                <input 
+                  type="password" 
+                  name="signup-form-user-password" 
+                  id="signup-form-password" 
+                  class="form__input" 
+                  minlength="8"
+                  data-form-input
+                >
+                <button type="button" class="form__toggle-show-password-btn" data-toggle-show-password-btn data-related-input-id="signup-form-password">
+                  <i class="ri-eye-off-line"></i>
+                </button>
+                <span class="form__group-error-text" data-signup-form-password-error-text></span>
+              </div>
+            </div>
+
+            <!-- FORM GROUP CONFIRM PASSWORD -->
+            <div class="form__group">
+              <label for="signup-form-confirm-password" class="form__label">Confirm Password</label>
+              <div class="has-toggle-show-password-btn">
+                <input 
+                  type="password" 
+                  name="signup-form-user-confirm-password" 
+                  id="signup-form-confirm-password"
+                  class="form__input"
+                  minlength="8"
+                  data-form-input
+                >
+                <button type="button" class="form__toggle-show-password-btn" data-toggle-show-password-btn data-related-input-id="signup-form-confirm-password">
+                  <i class="ri-eye-off-line"></i>
+                </button>
+                <span class="form__group-error-text" data-signup-form-confirm-password-error-text></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- RESPONSE MESSAGE CONTAINER -->
+          <div class="form-response-message-container" data-form-response-message-container>
+            <i></i>
+            <p></p>
+          </div>
+
+          <!-- FORM SUBMIT BUTTON -->
+          <button type="submit" class="btn-primary | form__submit-btn" data-signup-form-submit-btn>
+            Sign Up
+          </button>
+        </form>
+      </div>
+      <!-- SIGN UP FORM CONTAINER END -->
+
+      <!-- BACK TO USER LOGIN FORM BUTTON -->
+      <button type="button" class="back-to-user-login-form-btn" data-back-to-user-login-form-btn>
+        <i class="ri-arrow-left-line"></i>
+      </button>
+
+      <!-- CLOSE AUTHENTICATION FORMS BUTTON -->
+      <button type="button" class="auth-forms-close-btn" data-auth-forms-close-btn>
+        <i class="ri-close-line"></i>
+      </button> 
+    </div>
+  </div>
+
+  <!-- AUTHENTICATION FORM SCRIPTS -->
+  <script type="module" src="./assets/scripts/auth-form.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Angela Smith",
+        "ratings": 5,
+        "status": "Active",
+        "specialty": "Otologist"
+    },
+    {
+        "name": "Peter Bodden",
+        "ratings": 5,
+        "status": "Active",
+        "specialty": "General Physician"
+    },
+    {
+        "name": "Selena Abott",
+        "ratings": 5,
+        "status": "Active",
+        "specialty": "Neurologist"
+    },
+    {
+        "name": "Johnothan Baker",
+        "ratings": 4,
+        "status": "Active",
+        "specialty": "Dermotologist"
+    },
+    {
+        "name": "Lee Young",
+        "ratings": 4,
+        "status": "Active",
+        "specialty": "Cardiologist"
+    }
+]

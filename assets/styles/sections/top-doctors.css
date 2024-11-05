@@ -1,0 +1,73 @@
+.top-doctors { background-color: var(--color-gray-100); }
+
+.top-doctors__heading { margin-bottom: var(--mb-2); }
+
+.top-doctors__text {
+    text-align: center;
+    margin-bottom: var(--mb-2);
+}
+
+.top-doctors__items-container {
+    --rowGap: 2rem;
+    --columnGap: 1rem;
+}
+
+.top-doctors__item {
+    outline: 1px solid var(--color-gray-900);
+    border-radius: .5rem;
+}
+
+.top-doctors__item-img-container {
+    --height: 20rem;
+
+    block-size: var(--height);
+    inline-size: 100%;
+    border-radius: .5rem .5rem 0 0;
+    overflow: hidden;
+}
+
+.top-doctors__item-img {
+    block-size: 100%;
+    inline-size: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.top-doctors__item-content { padding: 1rem; }
+
+.top-doctors__item-availability-text {
+    color: var(--color-green);
+    font-weight: var(--fw-medium);
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: .5rem;
+    position: relative;
+}
+
+.top-doctors__item-availability-text::before {
+    content: '';
+    display: inline-block;
+    inline-size: calc(.5rem + 2px);
+    block-size: calc(.5rem + 2px);
+    border-radius: 50%;
+    background-color: var(--color-green);
+}
+
+.top-doctors__item-doctor-ratings { margin-bottom: .25rem; }
+
+.rating-star {
+    font-size: 1.25rem;
+    color: var(--color-yellow);
+}
+
+.top-doctors__item-doctor-name {
+    color: var(--color-black);
+    margin-bottom: var(--mb-0-5);
+}
+
+.top-doctors__item-doctor-specialty {
+    color: var(--color-black);
+    font-weight: var(--fw-medium);
+    letter-spacing: -.5px;
+}

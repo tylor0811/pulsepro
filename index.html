@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Tylor Coore">
+
+  <!-- FAV ICONS FOR DARK/LIGHT MODE -->
+  <link
+    rel="shortcut icon" 
+    href="./assets/images/black-fav-icon.png" 
+    type="image/png"
+    media="(prefers-color-scheme: light)"
+  >
+
+  <link
+    rel="shortcut icon" 
+    href="./assets/images/white-fav-icon.png" 
+    type="image/png"
+    media="(prefers-color-scheme: dark)"
+  >
+
+  <title>PulsePro</title>
+
+  <!-- REMIX ICONS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+
+  <!-- SWIPER CSS -->
+  <link rel="stylesheet" href="./assets/swiper/swiper-bundle.min.css">
+
+  <!-- CUSTOM STYLES -->
+  <link rel="stylesheet" href="./assets/styles/styles.css">
+</head>
+
+body>
+  <!-- PRIMARY HEADER -->
+  <header class="primary-header" data-primary-header>
+    <nav class="container | nav">
+      <!-- NAVIGATION LOGO -->
+      <a href="./index.html" class="inline-flex page-logo">
+        <i class="ri-pulse-line | page-logo__icon"></i>
+        PulsePro
+      </a>
+
+      <!-- NAVIGATION MENU -->
+      <div class="nav__menu" data-nav-menu>
+        <ul class="nav__menu-list">
+          <li>
+            <a href="#home" class="after-line | nav__menu-link active-link" data-nav-menu-link>
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#services" class="after-line | nav__menu-link" data-nav-menu-link>
+              Services
+            </a>
+          </li>
+          <li>
+            <a href="#testimonials" class="after-line | nav__menu-link" data-nav-menu-link>
+              Testimonials
+            </a>
+          </li>
+          <li>
+            <a href="#blogs" class="after-line | nav__menu-link" data-nav-menu-link>
+              Blogs
+            </a>
+          </li>
+          <li>
+            <a href="#contact" class="after-line | nav__menu-link" data-nav-menu-link>
+              Contact Us
+            </a>
+          </li>
+        </ul>
+
+        <!-- BOOK APPOINTMENT BUTTON -->
+        <button type="button" class="btn-primary" data-book-appointment-btn>
+          Book Appointment
+        </button>
+
+        <!-- NAVIGATION MENU CLOSE BUTTON -->
+        <button type="button" class="nav__menu-close-btn" data-nav-menu-close-btn>
+          <i class="ri-close-line"></i>
+        </button>
+
+        <p class="inline-flex page-logo | nav__menu-logo">
+          <i class="ri-pulse-line nav__menu-logo-icon | page-logo__icon"></i>
+          PulsePro
+        </p>
+      </div>
+
+      <div class="nav__btns">
+        <!-- BOOK APPOINTMENT BUTTON -->
+        <button type="button" class="btn-primary" data-book-appointment-btn>
+          Book Appointment
+        </button>
+
+        <!-- NAVIGATION MENU OPEN BUTTON -->
+        <button type="button" class="nav__menu-open-btn" data-nav-menu-open-btn>
+          <i class="ri-menu-3-line"></i>
+        </button> 
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HOME SECTION -->
+    <section class="section-padding-block | home" id="home" data-section>
+      <div class="container grid | home__container">
+        <div class="home__img-container">
+          <img
+            src="./assets/images/home-img.jpg"
+            alt="Home Image" 
+            class="home__img"
+          >
+        </div>
+
+        <article class="home__content">
+          <h1 class="home__heading">
+            Revolutionizing Healthcare with Smart Management
+          </h1>
+          <p class="home__description">
+            Streamline hospital operations and enhance patient care with our all-in-one management platform. From scheduling to
+            medical record handling, our system optimizes workflows, reduces paperwork, and empowers your team to focus on
+            delivering exceptional healthcare.
+          </p>
+          <button type="button" class="btn-primary inline-flex | home__btn" data-book-appointment-btn>
+            Book Appointment
+            <i class="ri-arrow-right-up-line home__btn-icon"></i>
+          </button>
+        </article>
+      </div>
+    </section>
+
+    <!-- BANNER SECTION -->
+    <section class="section-padding-block | banner">
+      <div class="container grid | banner__container">
+        <div class="banner__img-container">
+          <img
+            src="./assets/images/banner-img.jpg" 
+            alt="Banner Image" 
+            class="banner__img"
+            loading="lazy"
+          >
+        </div>
+
+        <article class="banner__content">
+          <span class="banner__heading">
+            Leading healthcare providers
+          </span>
+          <p class="banner__description">
+            PulsePro provides progressive, and affordable healthcare, accessibility on mobile and online for everyone. To us, it's not just work. We take pride in the solutions we deliver and we intend to serve you well.
+          </p>
+          <a href="#services" class="banner__btn">
+            Learn More
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="section-padding-block | services" id="services" data-section>
+      <div class="container | services__container">
+        <h2 class="after-line section-heading-line center-heading | services__heading">
+          Our Services
+        </h2>
+        <p class="services__description">
+          We provide the best choices for you. Adjust it to your health needs and make sure you undergo treatment with our highly qualified doctors that you can consult with for the type of service suitable for your health.
+        </p>
+
+        <!-- SERVICE ITEMS CONTAINER -->
+        <div class="grid | services__items-container">
+          <!-- SERVICE ITEM 1 -->
+          <div class="services__item">
+            <i class="ri-search-eye-line services__item-icon"></i>
+            <h3 class="center-heading | services__item-heading">
+              Search doctor
+            </h3>
+            <p class="services__item-description">
+              Choose your doctor form thousands of specialist, general and trusted hospitals.
+            </p>
+          </div>
+
+          <!-- SERVICE ITEM 2 -->
+          <div class="services__item">
+            <i class="ri-medicine-bottle-line services__item-icon"></i>
+            <h3 class="center-heading | services__item-heading">
+              Online pharmacy
+            </h3>
+            <p class="services__item-description">
+              Buy your medicines with our mobile application with a simple delivery system.
+            </p>
+          </div>
+
+          <!-- SERVICE ITEM 3 -->
+          <div class="services__item">
+            <i class="ri-survey-line services__item-icon"></i>
+            <h3 class="center-heading | services__item-heading">
+              Consultation
+            </h3>
+            <p class="services__item-description">
+              Free consultation with our trusted doctors and get the best recommendations.
+            </p>
+          </div>
+
+          <!-- SERVICE ITEM 4 -->
+          <div class="services__item">
+            <i class="ri-file-list-line services__item-icon"></i>
+            <h3 class="center-heading | services__item-heading">
+              Details info
+            </h3>
+            <p class="services__item-description">
+              Free consultation with our trusted doctors and get the best recommendations.
+            </p>
+          </div>
+
+          <!-- SERVICE ITEM 5 -->
+          <div class="services__item">
+            <i class="ri-first-aid-kit-line services__item-icon"></i>
+            <h3 class="center-heading | services__item-heading">
+              Emergency care
+            </h3>
+            <p class="services__item-description">
+              You can get 24/7 urgent care for yourself or your children and your lovely family.
+            </p>
+          </div>
+
+          <!-- SERVICE ITEM 6 -->
+          <div class="services__item">
+            <i class="ri-file-list-3-line services__item-icon"></i>
+            <h3 class="center-heading | services__item-heading">
+              Tracking
+            </h3>
+            <p class="services__item-description">
+              Track and save your mental history and health data.
+            </p>
+          </div>
+        </div> 
+      </div>
+    </section>
+
+    <!-- TOP DOCTORS SECTION -->
+    <section class="section-padding-block | top-doctors">
+      <div class="container | top-doctors__container">
+        <h2 class="after-line section-heading-line center-heading | top-doctors__heading">
+          Top Doctors
+        </h2>
+        <p class="top-doctors__text">
+          Simply browse through our list of trusted doctors.
+        </p>
+
+        <!-- TOP DOCTORS ITEMS CONTAINER -->
+        <div class="grid | top-doctors__items-container" data-top-doctors-items-container></div> 
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section-padding-block | testimonials" id="testimonials" data-section>
+      <div class="container | testimonials__container">
+        <h2 class="after-line center-heading | testimonials__heading">
+          What our customers are saying
+        </h2>
+
+        <!-- TESTIMONIALS ITEMS CONTAINER -->
+        <div class="grid | testimonials__items-container">
+          <!-- TESTOMONIAL SWIPER -->
+          <div class="swiper | testimonials__swiper" data-testimonial-swiper>
+            <ul class="swiper-wrapper | testimonials__wrapper">
+              <!-- TESTIMONIAL SLIDE 1 -->
+              <li class="swiper-slide | testimonials__slide">
+                <div class="testimonials__slide-quote-container">
+                  <i class="ri-double-quotes-l"></i>
+                </div>
+          
+                <p class="testimonials__slide-text">
+                  PulsePro has transformed the way we manage our hospital. The scheduling system is incredibly intuitive, and the
+                  overall
+                  interface is user-friendly. We've reduced patient wait times and improved the efficiency of our operations. I
+                  highly
+                  recommend PulsePro to any healthcare facility looking to streamline their management processes.
+                </p>
+          
+                <div class="testimonials__slide-writer">
+                  <i class="ri-user-line testimonials__slide-writer-icon"></i>
+          
+                  <div class="testimonials__slide-writer-bio">
+                    <span class="testimonials__slide-writer-bio-name">
+                      Dr. Angela Smith
+                    </span>
+                    <span class="testimonials__slide-writer-bio-occupation">
+                      Otologist
+                    </span>
+                  </div>
+                </div>
+              </li>
+          
+              <!-- TESTIMONIAL SLIDE 2 -->
+              <li class="swiper-slide | testimonials__slide">
+                <div class="testimonials__slide-quote-container">
+                  <i class="ri-double-quotes-l"></i>
+                </div>
+          
+                <p class="testimonials__slide-text">
+                  As a healthcare administrator, I was amazed by how easy it was to implement PulsePro in our hospital. The
+                  system's
+                  ability to handle everything from patient data to appointment scheduling has significantly reduced our paperwork
+                  and
+                  administrative burden. It's a game-changer for healthcare management!
+                </p>
+          
+                <div class="testimonials__slide-writer">
+                  <i class="ri-user-line testimonials__slide-writer-icon"></i>
+          
+                  <div class="testimonials__slide-writer-bio">
+                    <span class="testimonials__slide-writer-bio-name">
+                      Dr. Peter McKenzie
+                    </span>
+                    <span class="testimonials__slide-writer-bio-occupation">
+                      General Physician
+                    </span>
+                  </div>
+                </div>
+              </li>
+          
+              <!-- TESTIMONIAL SLIDE 3 -->
+              <li class="swiper-slide | testimonials__slide">
+                <div class="testimonials__slide-quote-container">
+                  <i class="ri-double-quotes-l"></i>
+                </div>
+          
+                <p class="testimonials__slide-text">
+                  With PulsePro, we've seen a major improvement in our day-to-day operations. The integration between patient
+                  records,
+                  staff schedules, and billing has made our workflow more seamless than ever. Our team loves the platform's ease
+                  of use,
+                  and our patients appreciate the smoother experience. It's a win-win!
+                </p>
+          
+                <div class="testimonials__slide-writer">
+                  <i class="ri-user-line testimonials__slide-writer-icon"></i>
+          
+                  <div class="testimonials__slide-writer-bio">
+                    <span class="testimonials__slide-writer-bio-name">
+                      Dr. Selena Abott
+                    </span>
+                    <span class="testimonials__slide-writer-bio-occupation">
+                      Neurologist
+                    </span>
+                  </div>
+                </div>
+              </li>
+          
+              <!-- TESTIMONIAL SLIDE 4 -->
+              <li class="swiper-slide | testimonials__slide">
+                <div class="testimonials__slide-quote-container">
+                  <i class="ri-double-quotes-l"></i>
+                </div>
+          
+                <p class="testimonials__slide-text">
+                  PulsePro is a lifesaver! The transition to digital patient records and efficient scheduling has greatly enhanced
+                  our
+                  ability to provide top-notch care. Our team spends less time on paperwork and more time focusing on what really
+                  matters—our patients. I can't imagine going back to our old system.
+                </p>
+          
+                <div class="testimonials__slide-writer">
+                  <i class="ri-user-line testimonials__slide-writer-icon"></i>
+          
+                  <div class="testimonials__slide-writer-bio">
+                    <span class="testimonials__slide-writer-bio-name">
+                      Dr. Lee Young
+                    </span>
+                    <span class="testimonials__slide-writer-bio-occupation">
+                      Cardiologist
+                    </span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          
+            <!-- SWIPER NAVIGATION -->
+            <div class="swiper-button-prev | testimonials__swiper-navigation-prev-btn" data-testimonials-navigation-prev-btn>
+              <i class="ri-arrow-left-line"></i>
+            </div>
+            <div class="swiper-button-next | testimonials__swiper-navigation-next-btn" data-testimonials-navigation-next-btn>
+              <i class="ri-arrow-right-line"></i>
+            </div>
+          </div>
+
+          <!-- TESTIMONIALS IMAGE CONTAINER -->
+          <div class="testimonials-img-container">
+            <div class="testimonials__square"></div>
+            <img src="./assets/images/testimonial-img.jpg" alt="Testimonials Image" class="testimonials__img" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOGS -->
+    <section class="section-padding-block | blogs" id="blogs" data-section>
+      <div class="container | blogs__container">
+        <h2 class="after-line section-heading-line center-heading | blogs__heading">
+          Lastest Articles
+        </h2>
+
+        <!-- BLOGS ITEMS CONTAINER -->
+        <div class="grid | blogs__items-container">
+          <!-- BLOG ITEM 1 -->
+          <div class="blogs__item">
+            <div class="inline-flex | blogs__item-writer">
+              <i class="ri-user-line"></i>
+              <span class="blogs__item-writer-name">By Admin</span>
+            </div>
+
+            <span class="blogs__item-heading">
+              Efficient Patient Record Management
+            </span>
+
+            <p class="blogs__item-description">
+              Streamline patient information with our comprehensive system, ensuring quick access to medical histories, appointments,
+              and treatment plans for enhanced care.
+            </p>
+          </div>
+
+          <!-- BLOG ITEM 2 -->
+          <div class="blogs__item">
+            <div class="inline-flex | blogs__item-writer">
+              <i class="ri-user-line"></i>
+              <span class="blogs__item-writer-name">By Admin</span>
+            </div>
+          
+            <span class="blogs__item-heading">
+              Seamless Appointment Scheduling
+            </span>
+          
+            <p class="blogs__item-description">
+              Optimize patient and staff time with an intuitive appointment booking system that minimizes wait times and reduces
+              scheduling conflicts.
+            </p>
+          </div>
+
+          <!-- BLOG ITEM 3 -->
+          <div class="blogs__item">
+            <div class="inline-flex | blogs__item-writer">
+              <i class="ri-user-line"></i>
+              <span class="blogs__item-writer-name">By Admin</span>
+            </div>
+          
+            <span class="blogs__item-heading">
+              Integrated Billing and Insurance Solutions
+            </span>
+          
+            <p class="blogs__item-description">
+              Simplify billing processes and insurance claims with our automated system, designed to improve accuracy and speed up
+              payment cycles.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section-padding-block | contact" id="contact" data-section>
+      <div class="container | contact__container">
+        <h2 class="after-line section-heading-line | contact__heading">
+          Let's get in touch
+        </h2>
+        
+        <!-- CONTACT ITEMS CONTAINER -->
+        <div class="grid | contact__items-container">
+          <!-- LEFT SECTION -->
+          <section class="contact__item-left-section">
+            <form action="" class="contact__form" autocomplete="off" data-contact-form>
+              <div class="contact__form-groups">
+                <!-- NAME FORM GROUP -->
+                <div class="contact__form-group">
+                  <label for="contact__form-name" class="contact__form-label">
+                    Full Name
+                  </label>
+                  <input
+                    type="text"
+                    name="contact__form-user-name"
+                    id="contact__form-name"
+                    class="contact__form-input"
+                    data-form-input
+                  >
+                  <span class="contact__form-error-input-message" data-contact-form-name-error-message>
+                  </span>
+                </div>
+
+                <!-- EMAIL FORM GROUP -->
+                <div class="contact__form-group">
+                  <label for="contact__form-email" class="contact__form-label">
+                    Email
+                  </label>
+                  <input
+                    type="email" 
+                    name="contact__form-user-email" 
+                    id="contact__form-email" 
+                    class="contact__form-input"
+                    data-form-input
+                  >
+                  <span class="contact__form-error-input-message" data-contact-form-email-error-message></span>
+                </div>
+
+                <!-- MESSAGE FORM GROUP -->
+                <div class="contact__form-group">
+                  <label for="contact__form-message" class="contact__form-label">
+                    Message
+                  </label>
+                  <textarea
+                    name="contact__form-user-message" 
+                    id="contact__form-message" 
+                    rows="10"
+                    class="contact__form-textarea"
+                    data-form-input
+                    ></textarea>
+                  <span class="contact__form-error-input-message" data-contact-form-details-error-message>
+                  </span>
+                </div>
+              </div>
+
+              <!-- RESPONSE MESSAGE CONTAINER -->
+              <div class="form-response-message-container" data-form-response-message-container>
+                <i></i>
+                <p></p>
+              </div>
+
+              <!-- FORM SUBMIT BUTTON -->
+              <button type="submit" class="btn-primary | contact__form-submit-btn" data-contact-form-submit-btn>
+                Submit
+              </button>
+            </form>
+          </section>
+
+          <!-- RIGHT SECTION -->
+          <section class="contact__item-right-section">
+            <img
+              src="./assets/images/contact-illustration-img.png"
+              alt="Contact Form Illustration"
+              class="contact__form-img"
+            >
+
+            <!-- CONTACT FORM DATA -->
+            <div class="contact__form-data">
+              <!-- CONTACT FORM DATA GROUP 1 -->
+              <div class="inline-flex | contact__form-data-group">
+                <i class="ri-map-pin-fill"></i>
+                <span class="contact__form-data-group-text">
+                  76 GreenBay Road, Grand Cayman
+                </span>
+              </div>
+
+              <!-- CONTACT FORM DATA GROUP 2 -->
+              <div class="inline-flex | contact__form-data-group">
+                <i class="ri-phone-fill"></i>
+                <span class="contact__form-data-group-text">
+                  +345-555-5555
+                </span>
+              </div>
+
+              <!-- CONTACT FORM DATA GROUP 3 -->
+              <div class="inline-flex | contact__form-data-group">
+                <i class="ri-mail-fill"></i>
+                <span class="contact__form-data-group-text">
+                  pulsepro123@gmail.com
+                </span>
+              </div>
+            </div>
+
+            <!-- CONTACT LINKS -->
+            <div class="contact__form-links-list">
+              <a href="https://www.facebook.com/" target="_blank" class="contact__form-link">
+                <i class="ri-facebook-box-fill"></i>
+              </a>
+
+              <a href="https://www.instagram.com/" target="_blank" class="contact__form-link">
+                <i class="ri-instagram-fill"></i>
+              </a>
+
+              <a href="https://x.com/" target="_blank" class="contact__form-link">
+                <i class="ri-twitter-x-fill"></i>
+              </a>
+
+              <a href="https://www.linkedin.com/" target="_blank" class="contact__form-link">
+                <i class="ri-linkedin-box-fill"></i>
+              </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="section-padding-block | footer">
+    <div class="container | footer__container">
+      <!-- TOP SECTION -->
+      <section class="grid | footer__top-section">
+        <!-- FOOTER COLUMN 1 -->
+        <div class="footer__top-section-col">
+          <!-- FOOTER LOGO -->
+          <a href="./index.html" class="inline-flex page-logo | footer__logo">
+            <i class="ri-pulse-line | page-logo__icon"></i>
+            PulsePro
+          </a>
+
+          <p class="footer__text">
+            PulsePro provides progressive and affordable healthcare. Accessible on mobile and online for everyone.
+          </p>
+
+          <!-- FOOTER LINKS -->
+          <div class="footer__social-links-list">
+            <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
+              <i class="ri-facebook-box-fill"></i>
+            </a>
+          
+            <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+              <i class="ri-instagram-fill"></i>
+            </a>
+          
+            <a href="https://x.com/" target="_blank" class="footer__social-link">
+              <i class="ri-twitter-x-fill"></i>
+            </a>
+          
+            <a href="https://www.linkedin.com/" target="_blank" class="footer__social-link">
+              <i class="ri-linkedin-box-fill"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- FOOTER COLUMN 2 -->
+        <div class="footer__top-section-col">
+          <span class="footer__heading">
+            Company
+          </span>
+
+          <ul class="footer__links-list">
+            <li>
+              <a href="#" class="footer__link">About Us</a>
+            </li>
+            <li>
+              <a href="#" class="footer__link">Support Center</a>
+            </li>
+            <li>
+              <a href="#" class="footer__link">Customer Support</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- FOOTER COLUMN 3 -->
+        <div class="footer__top-section-col">
+          <span class="footer__heading">
+            Regions
+          </span>
+
+          <ul class="footer__links-list">
+            <li>
+              <a href="#" class="footer__link">Cayman Islands</a>
+            </li>
+            <li>
+              <a href="#" class="footer__link">Jamaica</a>
+            </li>
+            <li>
+              <a href="#" class="footer__link">New York</a>
+            </li>
+            <li>
+              <a href="#" class="footer__link">Honduras</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- BOTTOM SECTION -->
+      <section class="footer__bottom-section">
+        <p class="footer__copyright-text">
+          &copy; <span>PulsePro</span>. All Rights Reserved
+        </p>
+      </section>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP BUTTON -->
+  <a href="#" class="back-to-top-btn" data-back-to-top-btn>
+    <i class="ri-arrow-up-line"></i>
+  </a>
+
+  
+  <!-- SWIPER JS -->
+  <script src="./assets/swiper/swiper-bundle.min.js"></script>
+  
+  <!-- EMAILJS CDN -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  
+  <!-- MAIN SCRIPT -->
+  <script type="module" src="./assets/scripts/index.js"></script>
+</body>
+
+</html>

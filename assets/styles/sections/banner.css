@@ -1,0 +1,53 @@
+.banner { background-color: var(--color-purple-300); }
+
+.banner__container {
+    --rowGap: 2rem;
+    --columnGap: 4rem;
+}
+
+.banner__img-container {
+    --height: 28rem;
+
+    block-size: var(--height);
+    inline-size: 100%;
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+.banner__img {
+    block-size: 100%;
+    inline-size: 100%;
+    object-fit: cover;
+    object-fit: center top;
+}
+
+.banner__content { text-align: center; }
+
+.banner__heading {
+    color: var(--color-white);
+    font-size: var(--fs-h1);
+    font-weight: var(--fw-bold);
+    line-height: 1.2;
+    margin-bottom: var(--mb-2);
+}
+
+.banner__description {
+    color: var(--color-white);
+    margin-bottom: var(--mb-2);
+}
+
+.banner__btn {
+    color: var(--color-white);
+    outline: 1px solid var(--color-white);
+    padding: .75rem 2rem;
+    border-radius: 2rem;
+    font-size: 1.125rem;
+    inline-size: max-content;
+    transition: background-color var(--transition), color var(--transition);
+}
+
+.banner__btn:focus,
+.banner__btn:hover {
+    background-color: var(--color-white);
+    color: var(--color-purple-100);
+}

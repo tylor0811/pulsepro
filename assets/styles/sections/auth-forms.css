@@ -1,0 +1,171 @@
+.auth-forms-container {
+    inline-size: min(425px, 100%);
+    margin-inline: auto;
+}
+
+.auth-form-container__logo {
+    cursor: default;
+    margin-bottom: var(--mb-2);
+}
+
+.auth-form-container__logo:hover { color: var(--color-black); }
+
+.auth-forms-wrapper {
+    background-color: inherit;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, .2);
+    padding: 2rem 1rem 3rem;
+    border-radius: .25rem;
+    position: relative;
+}
+
+.auth-forms-wrapper[data-show-form="login-form"] .signup-form-container,
+.auth-forms-wrapper[data-show-form="signup-form"] .login-form-container { display: none; }
+
+.form-container__heading {
+    color: var(--color-black);
+    font-size: 1.5rem;
+    font-weight: var(--fw-bold);
+    text-align: center;
+    margin-bottom: var(--mb-1);
+}
+
+.form-container__text {
+    text-align: center;
+    line-height: 1.3;
+    margin-bottom: var(--mb-2);
+}
+
+.form__link {
+    color: var(--color-purple-300);
+    font-weight: var(--fw-medium);
+}
+
+.form__link:focus,
+.form__link:hover {
+    text-decoration-line: underline;
+    text-decoration-color: var(--color-purple-100);
+}
+
+.form__groups-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    row-gap: 1rem;
+}
+
+.form__label {
+    color: var(--color-black);
+    font-weight: var(--fw-medium);
+    font-size: .875rem;
+    margin-bottom: var(--mb-0-5);
+}
+
+.form__input {
+    outline: 2px solid var(--color-gray-900);
+    padding: 1rem;
+    color: var(--color-black);
+}
+
+.form__group-error-text {
+    color: var(--color-warning);
+    font-size: .875rem;
+    font-weight: var(--fw-bold);
+    font-style: italic;
+    line-height: 1.2;
+    margin-top: var(--mb-0-5);
+    display: none;
+}
+
+.form__input:active,
+.form__input:focus-visible { outline-color: var(--color-black); }
+
+.form__group.error-state .form__input,
+.has-toggle-show-password-btn.error-state .form__input { outline-color: var(--color-warning); }
+
+.form__group.error-state .form__group-error-text,
+.has-toggle-show-password-btn.error-state .form__group-error-text { display: block; }
+
+.has-toggle-show-password-btn.error-state .form__toggle-show-password-btn { top: 20%; }
+
+.form__group:has(.form__group-header) .form__label { margin-bottom: 0; }
+
+.form__group:has(.has-toggle-show-password-btn) .form__input { padding-right: 3.25rem; }
+
+.form__group-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--mb-0-5);
+}
+
+.forgot-password-link { font-size: .875rem; }
+
+.has-toggle-show-password-btn { position: relative; }
+
+.form__toggle-show-password-btn {
+    position: absolute;
+    inset: 25% 1rem auto auto;
+}
+
+.form__toggle-show-password-btn:focus i,
+.form__toggle-show-password-btn:hover i { color: var(--color-purple-100); }
+
+.form__submit-btn {
+    inline-size: 100%;
+    padding-block: 1rem;
+    margin-top: var(--mb-2);
+}
+
+.form__footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: var(--mb-2);
+}
+
+.back-to-user-login-form-btn,
+.auth-forms-close-btn { position: absolute; }
+
+.back-to-user-login-form-btn {
+    inset: 1rem auto auto 1rem;
+    display: none;
+}
+
+.auth-forms-wrapper:has(
+    [data-login-user-type="admin"],
+    [data-login-user-type="doctor"]
+) .back-to-user-login-form-btn { display: inline-block; }
+
+.auth-forms-wrapper:has(
+    [data-login-user-type="admin"],
+    [data-login-user-type="doctor"]
+) .form__footer { display: none; }
+
+.auth-forms-wrapper:has(
+    [data-login-user-type="admin"],
+    [data-login-user-type="doctor"]
+) .form-container__text { display: none; }
+
+.auth-forms-wrapper:has(
+    [data-login-user-type="admin"],
+    [data-login-user-type="doctor"]
+) .forgot-password-link { display: none; }
+
+.back-to-user-login-form-btn i {
+    font-weight: var(--fw-bold);
+    font-size: 1.75rem;
+}
+
+.auth-forms-close-btn {
+    inset: 0 0 auto auto;
+    background-color: var(--color-black);
+    padding: .5rem;
+    border-radius: 0 0 0 .25rem;
+}
+
+.auth-forms-close-btn i {
+    color: var(--color-white);
+    font-weight: var(--fw-bold);
+}

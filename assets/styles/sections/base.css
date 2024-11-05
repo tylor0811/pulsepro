@@ -1,0 +1,366 @@
+/* 
+-------------------------------------------------
+    #ROBOTO FONT FACE
+-------------------------------------------------
+*/
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 400;
+    src: local('roboto-regular-webfont'),
+        url('../../fonts/roboto/roboto-regular-webfont.woff2') format('woff2'),
+        url('../../fonts/roboto/roboto-regular-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 500;
+    src: local('roboto-medium-webfont'),
+        url('../../fonts/roboto/roboto-medium-webfont.woff2') format('woff2'),
+        url('../../fonts/roboto/roboto-medium-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 700;
+    src: local('roboto-bold-webfont'),
+        url('../../fonts/roboto/roboto-bold-webfont.woff2') format('woff2'),
+        url('../../fonts/roboto/roboto-bold-webfont.woff') format('woff');
+}
+
+
+/* 
+-------------------------------------------------
+    #GLOBAL VARIABLES
+-------------------------------------------------
+*/
+:root {
+    /* #COLORS */
+    --color-white: hsl(0, 0%, 100%);
+    --color-gray-100: hsl(0, 0%, 96%);
+    --color-gray-900: hsl(0, 0%, 50%);
+    --color-black: hsl(0, 10%, 10%);
+    --color-purple-100: hsl(240, 40%, 62%);
+    --color-purple-300: hsl(240, 40%, 42%);
+    --color-purple-900: hsl(240, 40%, 20%);
+    --color-warning: hsl(0, 50%, 50%);
+    --color-green: hsla(120, 40%, 35%);
+    --color-yellow: hsl(40, 60%, 45%);
+
+    /* #FONT WEIGHTS */
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-bold: 700;
+
+    /* #FONT FAMILY */
+    --ff-body: 'Roboto', sans-serif;
+
+    /* #FONT SIZES */
+    --fs-h1: 2.25rem;
+    --fs-h2: 1.75rem;
+    --fs-h3: 1.125rem;
+    --fs-text: 1rem;
+    --fs-link: 1rem;
+
+    /* #MARGIN BOTTOMS */
+    --mb-0-5: .5rem;
+    --mb-1: 1rem;
+    --mb-2: 2rem;
+
+    /* #Z-INDEX */
+    --z-index-scrollToTop-button: 9;
+    --z-index-primary-header: 10;
+    --z-index-body-overlay: 11;
+    --z-index-auth-forms: 12;
+
+    /* #GENERALS */
+    --transition: 250ms linear;
+    --primary-header-height: 4rem;
+}
+
+@media screen and (min-width: 768px) {
+    :root { --primary-header-height: 6rem; }
+}
+
+@media screen and (min-width: 992px) {
+    :root {
+        --fs-h1: 2.75rem;
+        --fs-h2: 2.25rem;
+        --fs-h3: 1.25rem;
+        --fs-text: 1.125rem;
+        --fs-link: .9375rem;
+    }
+}
+
+
+/* 
+-------------------------------------------------
+    #RESETS
+-------------------------------------------------
+*/
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*::selection {
+    background-color: var(--color-purple-900);
+    color: var(--color-white);
+}
+
+html,
+body { overflow-x: hidden; }
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    scroll-padding-top: 1rem;
+}
+
+head { display: none; }
+
+body {
+    background-color: var(--color-white);
+    color: var(--color-black);
+    font-weight: var(--fw-regular);
+    font-family: var(--ff-body);
+    line-height: 1.5;
+}
+
+body:has(
+    .auth-forms-container,
+    .reset-password-form-container
+) { padding: 2rem 1rem 3rem; }
+
+a {
+    text-decoration: none;
+    outline: none;
+    display: inline;
+}
+
+input,
+button,
+textarea {
+    background-color: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+input,
+textarea {
+    display: block;
+    inline-size: 100%;
+    font-weight: inherit;
+}
+
+button {
+    display: inline-block;
+    block-size: auto;
+    inline-size: fit-content;
+    font-weight: var(--fw-medium);
+}
+
+span,
+label { line-height: 1; }
+
+span { display: block; }
+
+label { display: inline-block; }
+
+p {
+    color: var(--color-gray-900);
+    font-size: var(--fs-text);
+}
+
+h1,
+h2,
+h3 {
+    font-weight: var(--fw-bold);
+    color: var(--color-purple-900);
+    line-height: 1.2;
+    letter-spacing: -1px;
+    inline-size: fit-content;
+}
+
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); }
+
+ul { list-style: none; }
+
+i { 
+    font-size: 1.5rem;
+    font-weight: var(--fw-medium);
+    color: var(--color-black);
+}
+
+img {
+    display: block;
+    max-inline-size: 100%;
+    block-size: auto;
+    user-select: none;
+}
+
+@media screen and (max-width: 320px) {
+    /* 
+    -------------------------------------------------
+        #AUTHENTICATION FORMS
+    -------------------------------------------------
+    */
+    body:has(.auth-forms-container) { padding-inline: .5rem; }
+}
+
+@media screen and (min-width: 768px) {
+    html { scroll-padding-top: 3rem; }
+}
+
+
+/* 
+-------------------------------------------------
+    #REUSABLE CLASSES
+-------------------------------------------------
+*/
+.container {
+    inline-size: min(1110px, 100%);
+    margin-inline: auto;
+    padding-inline: 1rem;
+}
+
+.center-heading { margin-inline: auto; }
+
+.grid {
+    --numberOfColumns: 1;
+    --rowGap: 0;
+    --columnGap: 0;
+
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(var(--numberOfColumns), 1fr);
+    gap: var(--rowGap) var(--columnGap);
+}
+
+.section-padding-block { padding-block: 5rem 3rem; }
+
+.after-line {
+    --moveLineDownBy: 0;
+    --lineWidthInPercent: 0;
+    
+    position: relative;
+}
+
+.after-line::after {
+    content: '';
+    position: absolute;
+    inset: auto 0 calc(var(--moveLineDownBy) * -1) 0;
+    block-size: 2px;
+    inline-size: var(--lineWidthInPercent);
+    background-color: var(--color-purple-300);
+    transition: inline-size var(--transition);
+}
+
+.section-heading-line {
+    --moveLineDownBy: .25rem;
+    --lineWidthInPercent: 28%;
+}
+
+.inline-flex {
+    --columnGap: .5rem;
+
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: var(--columnGap);
+}
+
+.btn-primary {
+    color: var(--color-white);
+    background-color: var(--color-purple-100);
+    padding: .75em 2em;
+    transition: background-color var(--transition);
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible { background-color: var(--color-purple-900); }
+
+.page-logo {
+    color: var(--color-black);
+    font-size: 1.25rem;
+    font-weight: var(--fw-bold);
+    transition: color var(--transition);
+}
+
+.page-logo:hover,
+.page-logo:focus,
+.page-logo__icon { color: var(--color-purple-100); }
+
+.back-to-top-btn {
+    position: fixed;
+    inset: auto 1rem -100% auto;
+    z-index: var(--z-index-scrollToTop-button);
+    background-color: var(--color-black);
+    padding: 1rem;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    inline-size: 3rem;
+    block-size: 3rem;
+    opacity: 0;
+    transition: bottom var(--transition), opacity var(--transition);
+    transition-duration: 750ms;
+}
+
+/* #SHOW BACK TO TOP BUTTON */
+.back-to-top-btn.show-btn {
+    opacity: 1;
+    bottom: 2rem;
+}
+
+.back-to-top-btn i {
+    color: var(--color-white);
+    font-weight: var(--fw-bold);
+}
+
+.form-response-message-container {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: .25rem;
+    margin-block: var(--mb-1);
+}
+
+.form-response-message-container i {
+    font-size: 1.75rem;
+    font-weight: var(--fw-bold);
+}
+
+.form-response-message-container p {
+    color: var(--color-black);
+    font-size: .875rem;
+    font-weight: var(--fw-medium);
+}
+
+.form-response-message-container.successful,
+.form-response-message-container.failed { display: flex; }
+
+.form-response-message-container.successful i { color: var(--color-green); }
+.form-response-message-container.failed i { color: var(--color-warning); }
+
+.form-response-message-container.successful + button,
+.form-response-message-container.failed + button { margin-top: 0; }
+
+@media screen and (max-width: 320px) {
+    .btn-primary { padding-inline: 1.5rem; }
+}
+
+@media screen and (min-width: 768px) {
+    .section-padding-block { padding-bottom: 5rem; }
+}
