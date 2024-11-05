@@ -22,7 +22,6 @@ const selectors = {
     signUpFormLink: document.querySelector('[data-signup-form-link]'),
     loginFormLink: document.querySelector('[data-login-form-link]'),
     authFormsCloseBtn: document.querySelector('[data-auth-forms-close-btn]'),
-    forgotPasswordLink: document.querySelector('[data-forgot-password-link]'),
     backToUserLoginFormBtn: document.querySelector('[data-back-to-user-login-form-btn]'),
     adminLoginLink: document.querySelector('[data-admin-login-link]'),
     doctorLoginLink: document.querySelector('[data-doctor-login-link]'),
@@ -320,13 +319,6 @@ if (selectors.loginFormLink) {
         if (isCredentialInLocalStorage('user-credential')) {
             automaticallyAddCredentialToLoginForm('user-credential');
         }
-    });
-}
-
-if (selectors.forgotPasswordLink) {
-    selectors.forgotPasswordLink.addEventListener('click', function(e) {
-        e.preventDefault();
-        window.open('/pulsepro-reset-user-password-form.html', '_blank');
     });
 }
 

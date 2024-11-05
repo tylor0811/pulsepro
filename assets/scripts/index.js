@@ -3,7 +3,7 @@
 import { 
     isValidEmail, addErrorState, removeValueFromFormInputs, 
     removeErrorStateOnInput, displayFormResponseMessage,
-    navigateBetweenAppPages 
+    goToPage 
 } from './utility/utility.js';
 
 
@@ -14,7 +14,6 @@ const selectors = {
     primaryHeader: document.querySelector('[data-primary-header]'),
     navMenu: document.querySelector('[data-nav-menu]'),
     navMenuLinks: document.querySelectorAll('[data-nav-menu-link]'),
-    bookAppointmentBtns: document.querySelectorAll('[data-book-appointment-btn]'),
     navMenuCloseBtn: document.querySelector('[data-nav-menu-close-btn]'),
     navMenuOpenBtn: document.querySelector('[data-nav-menu-open-btn]'),
     sections: document.querySelectorAll('[data-section]'),
@@ -252,23 +251,6 @@ window.addEventListener('scroll', function () {
         selectors.navMenu.classList.remove('show-menu');
     }
 });
-
-if (selectors.bookAppointmentBtns) {
-    selectors.bookAppointmentBtns.forEach(function(bookAppointmentBtn) {
-        bookAppointmentBtn.addEventListener('click', function () {
-            if (selectors.navMenu.classList.contains('show-menu')) {
-                selectors.navMenu.classList.remove('show-menu');
-    
-                if (window.scrollY > 0) {
-                    addScrolledClassToPrimaryHeader();
-                }
-            }
-
-            //navigateBetweenAppPages
-            window.open(window.location.href + '/pulsepro-auth-forms.html', '_blank'); //open page in a new tab
-        });
-    });
-}
 
 window.addEventListener('scroll', function () { changeActiveNavMenuLink() });
 

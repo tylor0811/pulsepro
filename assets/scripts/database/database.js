@@ -10,7 +10,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
 
 import {
-    displayFormResponseMessage, encryptPassword, removeValueFromFormInputs, resetAllToggleShowBtnsAndRelatedInputsToDefault
+    displayFormResponseMessage, encryptPassword, removeValueFromFormInputs, resetAllToggleShowBtnsAndRelatedInputsToDefault, goToPage
 } from '../utility/utility.js';
 
 import {
@@ -198,7 +198,7 @@ export async function signInUser(formElement, credential) {
             'Welcome User'
         );
 
-        window.location.pathname = 'pulsepro-user-home-page.html';
+        // goToPage('pulsepro-user-home-page.html');
     } catch (error) {
         if (error.code === 'auth/invalid-credential') {
             await displayFormResponseMessage(
@@ -253,7 +253,7 @@ export async function signInAdmin(formElement, credential) {
             'Welcome Admin'
         );
 
-        window.location.pathname = 'pulsepro-admin-dashboard.html';
+        // goToPage('pulsepro-admin-dashboard.html');
     } catch (error) {
         if (error.code === 'auth/invalid-credential') {
             await displayFormResponseMessage(
@@ -307,8 +307,6 @@ export async function signInDoctor(formElement, credential) {
             'ri-check-line',
             'Welcome Doctor'
         );
-
-        window.location.pathname = 'pulsepro-doctor-dashboard.html';
     } catch (error) {
         if (error.code === 'auth/invalid-credential') {
             await displayFormResponseMessage(
