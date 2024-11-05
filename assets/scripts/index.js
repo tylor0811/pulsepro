@@ -1,6 +1,10 @@
 "use strict";
 
-import { isValidEmail, addErrorState, removeValueFromFormInputs, removeErrorStateOnInput, displayFormResponseMessage } from './utility/utility.js';
+import { 
+    isValidEmail, addErrorState, removeValueFromFormInputs, 
+    removeErrorStateOnInput, displayFormResponseMessage,
+    navigateBetweenAppPages 
+} from './utility/utility.js';
 
 
 /**
@@ -259,8 +263,9 @@ if (selectors.bookAppointmentBtns) {
                     addScrolledClassToPrimaryHeader();
                 }
             }
-            
-            window.open(window.location.href + 'pulsepro-auth-forms.html', '_blank'); //open page in a new tab
+
+            //navigateBetweenAppPages
+            window.open(window.location.href + '/pulsepro-auth-forms.html', '_blank'); //open page in a new tab
         });
     });
 }

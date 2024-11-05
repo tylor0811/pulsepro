@@ -170,3 +170,13 @@ export function decryptPassword(encryptedPassword) {
 
     return decryptedPassword;
 }
+
+/**
+ * Function to go to navigate between the webpages for the project
+ * when being hosted on github
+ */
+export function navigateBetweenAppPages(path, target) {
+    const protocol = window.location.protocol;
+    const hostName = window.location.hostname;
+    window.open(protocol + hostName + path, target);
+}
